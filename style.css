@@ -56,14 +56,20 @@ a {
     position: fixed;
     bottom: 80px;
     right: 20px;
-    background-color: #4CAF50; /* Cor de fundo verde */
-    color: white;
+    background: none ;
+    color: #000000;
     border: none;
-    border-radius: 5px;
-    padding: 15px;
+    padding: 0px;
     cursor: pointer;
     opacity: 0; /* Inicialmente invisível */
     transition: opacity 0.3s ease-in-out; /* Transição suave para aparecer */
+}
+.btn-voltar-topo img {
+    width: 60px;
+    height: auto;
+}
+.btn-voltar-topo p {
+    margin:0;
 }
   
 .btn-voltar-topo.show {
@@ -166,8 +172,7 @@ a {
 
 .formacao__lista {
     display: flex;
-    justify-content: center;
-    list-style: none ;
+    justify-content: space-between;
     gap: 16px;
     padding: 0 152px 82px 152px;
 }
@@ -177,7 +182,7 @@ a {
 }
 .formacao__elemento__marca {
     background-color: #ffffff;
-    width: 368px;
+    width: auto;
     height: 286px;
     /* background-image: url(assets/Isologo_FADU_2021.svg);
     background-repeat: no-repeat; */
@@ -328,9 +333,18 @@ a {
     border: none;
     resize: none;
 }
-.contato__botao {
+.contato__botao__enviar {
     background:#2A7AE4;
     color: #ffffff;
+    width: 165px;
+    height: 51px;
+    font-size: 16px;
+    border-color: #2A7AE4;    
+    text-align: center;
+    margin-right: 20px;
+}
+.contato__botao__limpar {
+    color: #000000;
     width: 165px;
     height: 51px;
     font-size: 16px;
