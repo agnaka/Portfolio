@@ -32,7 +32,9 @@
     </header>
         <!-- Botão para voltar ao topo -->
     <button class="btn-voltar-topo" onclick="scrollToTop()">
-        <i class="fas fa-arrow-up"></i> Voltar ao Topo
+        <img class="" src="assets/seta-acima.png" > <br>
+        <p>Voltar ao topo</p>
+        <!-- <p>Voltar ao TopoS</p> -->
     </button>
     <Section class="main">
         <!-- Seção de Apresentação -->
@@ -97,24 +99,20 @@
                     <p class="hobbies__nome">Tênis</p>
                 </li>
                 <li class="hobbies__elemento">
-                    <img class="hobbies__icone" src="assets/guitar_icon.png" alt="Tocar baixo">
-                    <p class="hobbies__nome">Tocar baixo</p>
+                    <img class="hobbies__icone" src="assets/swimming.png" alt="Tocar baixo">
+                    <p class="hobbies__nome">Natação</p>
                 </li>
                 <li class="hobbies__elemento">
-                    <img class="hobbies__icone" src="assets/headphones_icon.png" alt="Ouvir música">
-                    <p class="hobbies__nome">Ouvir música</p>
+                    <img class="hobbies__icone" src="assets/corrida_icon.png" alt="Ouvir música">
+                    <p class="hobbies__nome">Corrida</p>
                 </li>
                 <li class="hobbies__elemento">
                     <img class="hobbies__icone" src="assets/tv_icon.png" alt="Assistir séries">
                     <p class="hobbies__nome">Assistir séries</p>
                 </li>
                 <li class="hobbies__elemento">
-                    <img class="hobbies__icone" src="assets/forkspoon_icon.png" alt="Cozinhar">
-                    <p class="hobbies__nome">Cozinhar</p>
-                </li>
-                <li class="hobbies__elemento">
-                    <img class="hobbies__icone" src="assets/camera_icon.png" alt="Fotografar">
-                    <p class="hobbies__nome">Fotografar</p>
+                    <img class="hobbies__icone" src="assets/praia.png" alt="Praia">
+                    <p class="hobbies__nome">Praia</p>
                 </li>
             </ul>
         </section>
@@ -211,18 +209,31 @@
             <h2 class="contato__titulo">Contato</h2>
             <p>Quer entrar em contato comigo?<br>
                 Preencha o formulário ao lado e entrarei em contato o mais rápido possível.</p>
-            <form class="contato__formulario">
+            <form class="contato__formulario" action="" method="get" autocomplete="on">
                 <div class="contato__formulario__caixa">
-                    <p class="contato__formulario__caixa__nome">Nome</p>
-                    <input class="contato__campo" type="text" placeholder="">
+                    <p class="contato__formulario__caixa__nome"><label for="inome">Nome:</label></p>
+                    <input class="contato__campo" id="inome" type="text" placeholder="" autocomplete="username" required minlength="3"  maxlength="50">
                 </div>
                 <div class="contato__formulario__caixa">
-                    <p class="contato__formulario__caixa__email">E-email</p>
-                    <input class="contato__campo" type="email" placeholder="">
+                    <p class="contato__formulario__caixa__email"><label for="iemail">E-email</label></p>
+                    <input class="contato__campo" id="iemail" type="email" placeholder="" autocomplete="email" required> <!-- require é obrigatório-->
                 </div>
-                <input class="contato__campo__assunto" type="Assunto" placeholder="Assunto">
-                <textarea class="contato__campo--textarea" placeholder="Mensagem"></textarea>
-                <button class="contato__botao" type="submit">Enviar mensagem</button>
+                <input class="contato__campo__assunto" type="Assunto" placeholder="Assunto" required maxlength="50">
+                <textarea class="contato__campo--textarea" placeholder="Mensagem" required maxlength="300"></textarea>
+                <div>
+                    <button class="contato__botao__enviar" type="submit">Enviar</button>
+                    <button class="contato__botao__limpar" type="reset">Limpar</button>
+                </div>
+            </form>
+
+            <h1>Formulário Guarabara</h1>
+             <form > <!--se acrescentar autocomplete="off" : deixa de sugerir quando clicar dentro da caixa - action="" quando clicar em submit é para onde vai -->
+                <p><label for="inome">Nome:</label> <!-- Ctrl + Alt + W para envelopar com Abreviação, vincula o 'Nome' com o 'input' esto é bom para relacionar e favorecer os métodos de busca-->
+                    <input type="text" name="nome" id="inome" required size="40"></p>
+                <p><label for="isobrenome">Sobrenome:</label> <br>
+                    <input type="text" name="Sobrenome" id="isobrenome" required></p>
+                <p><input type="submit" value="Enviar mensagem"></p>
+                <p><input type="reset" value="limpar"></p>
             </form>
         </section>
     </Section>
