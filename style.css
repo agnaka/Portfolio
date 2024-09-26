@@ -1,0 +1,397 @@
+/* Este repositório base foi criado para te ajudar caso você não saiba como começar. Lembre-se de que o portfólio é a sua carta de apresentação e você deve dar a sua cara. Por isso, convidamos você a personalizá-lo de acordo com o seu estilo e preferências; não se limite apenas ao layout proposto no Figma. */
+:root {
+    --cor-de-fundo: #F5F5F5;
+    --cor-de-fundo-menu: #ffffff;
+    --cor-do-link: #000000;
+    --cor-da-section: #EAF2FD;
+}
+
+body {
+    background-color: var(--cor-de-fundo);
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+    line-height: 1.6;
+}
+
+ol, ul, li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--cor-do-link);
+}
+
+/* ------------------------------ Seção Menu -------------------------------*/
+.cabecalho {
+    display: flex;
+    align-items: center;
+    padding: 0 152px 0 152px;
+    background-color: var(--cor-de-fundo-menu);
+    /* position: fixed;
+    width: 100%;
+    /* height: 70px;
+    top: 0;
+    left: 0;
+    z-index: 1; Garante que o header fique acima do main, caso haja sobreposição. */ 
+}
+.cabecalho__logo-titulo {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+.cabecalho__logo {
+    max-width: 100px; /* Ajuste para telas pequenas */
+}
+
+.navegacao__lista {
+    margin-bottom: 0;
+}
+
+/* -------------------------------- Botão Scroll --------------------------------*/
+
+.btn-voltar-topo {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    background-color: #4CAF50; /* Cor de fundo verde */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 15px;
+    cursor: pointer;
+    opacity: 0; /* Inicialmente invisível */
+    transition: opacity 0.3s ease-in-out; /* Transição suave para aparecer */
+}
+  
+.btn-voltar-topo.show {
+    opacity: 1; /* Torna o botão visível */
+}
+
+
+/* ------------------------------ Seção Apresentação ------------------------------*/
+
+.apresentacao {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    padding-left: 152px;
+    padding-right: 152px;
+}
+.apresentacao__titulo {
+    font-size: 52px;
+    line-height: 60px;
+}
+.apresentacao__subtitulo {
+    font-size: 22px;
+    padding-top: 0;
+}
+.redes {
+    display: flex;
+    gap: 32px;
+    padding-left: 0;
+    padding-bottom: 55.2px;
+}
+
+/* ------------------------------ Seção Sobre mim ----------------------------------*/
+
+.sobre-mim {
+    background-color: var(--cor-da-section);
+}
+.sobre-mim__bloco {
+    padding: 64px 152px;
+}
+/* .sobre-mim__texto {
+    margin: 16px 152px 64px 152px;
+} */
+
+/*------------------------------ Seção de Habilidades ------------------------------*/
+
+.habilidades,
+.hobbies {
+    padding-left: 152px;
+    padding-right: 152px;
+}
+.habilidades__titulo,
+.hobbies__titulo {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    font-size: 38px;
+}
+.habilidades__lista,
+.hobbies__lista {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    padding-bottom: 88px;
+    padding-left: 0;
+}
+.habilidades__elemento,
+.hobbies__elemento {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: end;
+    width: 176px;
+    height: 174px;
+    gap: 8px;
+    padding-left: 16px;
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+.habilidades__nome,
+.hobbies__nome {
+    margin-top: 0;
+    margin-bottom: 16px;
+}
+
+/*------------------------------ Seção de Hobbies --------------------------------*/
+
+/* FORMAÇÃO ACADÊMICA */
+
+.formacao,
+.contato {
+    background-color: var(--cor-da-section);
+}
+
+.formacao__titulo {
+    text-align: center;
+    padding-top: 50px;
+    font-size: 32px;
+}
+
+.formacao__lista {
+    display: flex;
+    justify-content: center;
+    list-style: none ;
+    gap: 16px;
+    padding: 0 152px 82px 152px;
+}
+.formacao__elemento {
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+.formacao__elemento__marca {
+    background-color: #ffffff;
+    width: 368px;
+    height: 286px;
+    /* background-image: url(assets/Isologo_FADU_2021.svg);
+    background-repeat: no-repeat; */
+    background-position: center;
+    background-size: 190px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.formacao__elemento__marca img {
+    width: 200px;
+}
+
+
+/*------------------------------ Seção de Projetos --------------------------------*/
+
+.projetos__titulo{
+    text-align: center;
+    margin-top: 32px;
+    margin-bottom: 22px;
+    font-size: 32px;
+}
+.projetos__bloco {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.projetos__conteiner {
+    display: flex;
+    padding-left: 152px;
+    padding-right: 152px;
+    padding-bottom: 64px;
+    gap: 16px;
+}
+.projetos__conteiner__invertido {
+    display: flex;
+    flex-direction: row-reverse;
+    padding-left: 152px;
+    padding-right: 152px;
+    padding-bottom: 64px;
+    gap: 16px;
+}
+.projetos__conteiner__img {
+    width: 752px;
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+.projetos__conteiner__titulo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  
+    width: auto;  
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+.projetos__conteiner__titulo h3 {
+    margin-bottom: 0;
+    font-size: 22px;
+}
+.projetos__conteiner__titulo p {
+    margin-top: 5px;
+    margin-bottom: 8px;
+}
+.projetos__conteiner__botoes {
+    display: flex;
+    gap: 16px;
+}
+.projetos__conteiner__botao__repositorio {
+    width: 7.25rem;
+    padding: 1.5rem;
+    font-size: 16px;
+    /* border-radius: 24px; */
+    color: #2A7AE4;
+    border: solid;
+    border-width: 2px;
+    border-color: #2A7AE4;
+    text-align: center;
+}
+.projetos__conteiner__botao__demo {
+    background:#2A7AE4;
+    color: #ffffff;
+    width: 7.25rem;
+    padding: 1.5rem;
+    font-size: 16px;
+    border-color: #2A7AE4;    
+    text-align: center;
+}
+
+/*------------------------------ Seção de Contato ---------------------------------*/
+
+.contato__titulo{
+    font-size: 32px;
+    padding-left: 152px;
+    padding-top: 66px;
+
+}
+.contato {
+    background-color: var(--cor-da-section);
+    margin-bottom: 60px;
+}
+.contato p {
+    padding-left: 152px;
+}
+.contato__formulario {
+    display: flex;
+    flex-direction: column;
+    padding: 0 152px 32px 152px;
+    gap: 32px;
+}
+.contato__formulario__caixa {
+    width: 61%;
+    height: 56px;    
+    background-color: #FFFFFF;
+}
+.contato__formulario__caixa__nome {   
+    color: #A2A2A2;
+}
+.contato__formulario__caixa__email {
+    color: #2A7AE4;
+}
+.contato__formulario__caixa p {
+    padding-left: 12px;
+    margin-bottom: 0px;
+    margin-top: 8px;
+    font-size: 12px;
+}
+.contato__campo {
+    width: 60%;
+    position: relative;
+    padding-left: 12px;
+    padding-bottom: 7px;
+    border: none;
+    font-size: 16px;
+}
+.contato__campo__assunto {
+    width: 60%;
+    height: 56px;
+    padding-left: 12px;
+    font-size: 16px;
+    border: none;
+}
+.contato__campo--textarea {
+    height: 133px;
+    width: 60%;
+    padding-top: 16px;
+    padding-left: 12px;
+    font-size: 16px;
+    border: none;
+    resize: none;
+}
+.contato__botao {
+    background:#2A7AE4;
+    color: #ffffff;
+    width: 165px;
+    height: 51px;
+    font-size: 16px;
+    border-color: #2A7AE4;    
+    text-align: center;
+}
+
+/*------------------------------------- Footer -----------------------------------*/
+
+footer {
+    background-color: #1d85b990; /* Cor de fundo do rodapé opacidade 50%*/
+    color: #0b0c0e; /* Cor do texto */
+    text-align: center; /* Alinha o texto ao centro */
+    font-weight: 500;
+    padding: 0; /* Espaçamento interno */
+    width: 100%; /* Largura total da página */
+    height: 60px;
+    position: fixed; /* Posiciona o rodapé */
+    bottom: 0; /* Alinha ao fundo da página */
+    font-size: 1rem; /* Tamanho da fonte */
+}
+
+
+/* ------------------------------ Responsividade ---------------------------------------*/
+
+/* Tablets e telas maiores */
+@media (min-width: 768px) {
+    .cabecalho {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .cabecalho__logo {
+        max-width: 100px;
+    }
+
+    .cabecalho__titulo {
+        font-size: 1.5rem;
+    }
+
+    .navegacao__lista {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        margin-top: 0;
+    }
+
+    .navegacao__elemento a {
+        font-size: 1rem;
+    }
+}
+
+/* Telas grandes */
+@media (min-width: 1024px) {
+    /* Aqui você pode ajustar ainda mais o design para telas grandes */
+    .cabecalho__titulo {
+        font-size: 1.8rem;
+    }
+
+    .navegacao__elemento a {
+        font-size: 1.1rem;
+    }
+}
