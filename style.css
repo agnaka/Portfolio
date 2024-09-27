@@ -27,8 +27,10 @@ a {
 /* ------------------------------ Seção Menu -------------------------------*/
 .cabecalho {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    padding: 0 152px 0 152px;
+    max-width: 100%;
+    padding: 0 10% 0 10%;
     background-color: var(--cor-de-fundo-menu);
     /* position: fixed;
     width: 100%;
@@ -39,17 +41,19 @@ a {
 }
 .cabecalho__logo-titulo {
     display: flex;
+    justify-content: space-between;
     gap: 20px;
     align-items: center;
 }
 .cabecalho__logo {
     max-width: 100px; /* Ajuste para telas pequenas */
 }
-
 .navegacao__lista {
-    margin-bottom: 0;
+    display: flex;
+    font-size: 1rem;
+    align-items: center;
+    gap: 2rem;
 }
-
 /* -------------------------------- Botão Scroll --------------------------------*/
 
 .btn-voltar-topo {
@@ -63,9 +67,10 @@ a {
     cursor: pointer;
     opacity: 0; /* Inicialmente invisível */
     transition: opacity 0.3s ease-in-out; /* Transição suave para aparecer */
+    cursor: pointer;
 }
 .btn-voltar-topo img {
-    width: 60px;
+    width: 40px;
     height: auto;
 }
 .btn-voltar-topo p {
@@ -83,8 +88,9 @@ a {
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
-    padding-left: 152px;
-    padding-right: 152px;
+    padding-left: 10%;
+    padding-right: 10%;
+    gap: 6rem;
 }
 .apresentacao__titulo {
     font-size: 52px;
@@ -100,6 +106,9 @@ a {
     padding-left: 0;
     padding-bottom: 55.2px;
 }
+.redes__elemento img{
+    width: 12px;
+}
 
 /* ------------------------------ Seção Sobre mim ----------------------------------*/
 
@@ -107,25 +116,28 @@ a {
     background-color: var(--cor-da-section);
 }
 .sobre-mim__bloco {
-    padding: 64px 152px;
+    padding: 64px 10%;
 }
-/* .sobre-mim__texto {
-    margin: 16px 152px 64px 152px;
-} */
+.sobre-mim__titulo {
+    font-size: 32px;
+}
+.sobre-mim__texto {
+    margin-right: 34%;
+}
 
 /*------------------------------ Seção de Habilidades ------------------------------*/
 
 .habilidades,
 .hobbies {
-    padding-left: 152px;
-    padding-right: 152px;
+    padding-left: 10%;
+    padding-right: 10%;
 }
 .habilidades__titulo,
 .hobbies__titulo {
     text-align: center;
     margin-top: 40px;
     margin-bottom: 40px;
-    font-size: 38px;
+    font-size: 32px;
 }
 .habilidades__lista,
 .hobbies__lista {
@@ -162,6 +174,8 @@ a {
 .formacao,
 .contato {
     background-color: var(--cor-da-section);
+    padding-left: 10%;
+    padding-right: 10%;
 }
 
 .formacao__titulo {
@@ -174,7 +188,8 @@ a {
     display: flex;
     justify-content: space-between;
     gap: 16px;
-    padding: 0 152px 82px 152px;
+    padding-bottom: 82px;
+    padding-left: 0;
 }
 .formacao__elemento {
     flex-grow: 1;
@@ -192,10 +207,16 @@ a {
     align-items: center;
     justify-content: center;
 }
-.formacao__elemento__marca img {
+.formacao__icone {
     width: 200px;
 }
-
+.formacao__nome {
+    font-size: 22px;
+    margin-bottom: 0;
+}
+.formacao__detalhe {
+    margin-top: 8px;
+}
 
 /*------------------------------ Seção de Projetos --------------------------------*/
 
@@ -208,25 +229,23 @@ a {
 .projetos__bloco {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 10px;    
+    padding-left: 10%;
+    padding-right: 10%;
 }
 .projetos__conteiner {
     display: flex;
-    padding-left: 152px;
-    padding-right: 152px;
     padding-bottom: 64px;
     gap: 16px;
 }
 .projetos__conteiner__invertido {
     display: flex;
     flex-direction: row-reverse;
-    padding-left: 152px;
-    padding-right: 152px;
     padding-bottom: 64px;
     gap: 16px;
 }
 .projetos__conteiner__img {
-    width: 752px;
+    width: 65%;
     flex-grow: 1;
     flex-shrink: 1;
 }
@@ -249,52 +268,46 @@ a {
 .projetos__conteiner__botoes {
     display: flex;
     gap: 16px;
+    padding-bottom: 32px;
 }
 .projetos__conteiner__botao__repositorio {
-    width: 7.25rem;
-    padding: 1.5rem;
+    padding: 16px;
     font-size: 16px;
-    /* border-radius: 24px; */
     color: #2A7AE4;
     border: solid;
     border-width: 2px;
     border-color: #2A7AE4;
-    text-align: center;
+    align-self: center;
 }
 .projetos__conteiner__botao__demo {
     background:#2A7AE4;
-    color: #ffffff;
-    width: 7.25rem;
-    padding: 1.5rem;
+    padding: 16px;
     font-size: 16px;
+    color: #ffffff;
     border-color: #2A7AE4;    
-    text-align: center;
+    align-self: center;
 }
 
 /*------------------------------ Seção de Contato ---------------------------------*/
 
 .contato__titulo{
     font-size: 32px;
-    padding-left: 152px;
     padding-top: 66px;
-
 }
 .contato {
     background-color: var(--cor-da-section);
     margin-bottom: 60px;
 }
-.contato p {
-    padding-left: 152px;
-}
 .contato__formulario {
     display: flex;
     flex-direction: column;
-    padding: 0 152px 32px 152px;
+    padding-bottom: 32px;
     gap: 32px;
 }
 .contato__formulario__caixa {
-    width: 61%;
+    width: 60%;
     height: 56px;    
+    padding-left: 12px;    
     background-color: #FFFFFF;
 }
 .contato__formulario__caixa__nome {   
@@ -304,7 +317,7 @@ a {
     color: #2A7AE4;
 }
 .contato__formulario__caixa p {
-    padding-left: 12px;
+    padding-left: 0px;
     margin-bottom: 0px;
     margin-top: 8px;
     font-size: 12px;
@@ -338,18 +351,24 @@ a {
     color: #ffffff;
     width: 165px;
     height: 51px;
+    border-radius: 10px;
     font-size: 16px;
     border-color: #2A7AE4;    
     text-align: center;
     margin-right: 20px;
+    cursor: pointer;
 }
 .contato__botao__limpar {
+    background: #e6e2e2;
     color: #000000;
     width: 165px;
-    height: 51px;
+    height: 51px;    
+    border-radius: 10px;
+    border: none;
     font-size: 16px;
     border-color: #2A7AE4;    
-    text-align: center;
+    text-align: center; 
+    cursor: pointer;
 }
 
 /*------------------------------------- Footer -----------------------------------*/
@@ -370,42 +389,227 @@ footer {
 
 /* ------------------------------ Responsividade ---------------------------------------*/
 
-/* Tablets e telas maiores */
-@media (min-width: 768px) {
+/* Tablets */
+@media (max-width: 768px) {
+    /* .navegacao__lista {
+        display: none;
+    }  */
+    .navegacao__elemento:nth-child(1),
+    .navegacao__elemento:nth-child(2),
+    .navegacao__elemento:nth-child(3),
+    .navegacao__elemento:nth-child(4),
+    .navegacao__elemento:nth-child(5) {
+        display: none;
+    }
     .cabecalho {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
+        padding: 0 32px 0 32px;    
     }
-
-    .cabecalho__logo {
-        max-width: 100px;
+    .cabecalho__titulo{
+        font-size: 24px;
     }
-
-    .cabecalho__titulo {
-        font-size: 1.5rem;
+    .redes {
+        padding-bottom: 20px;
     }
+    .apresentacao {
+        padding: 0 32px 0 32px;
+        gap: 0rem;
+    } 
 
-    .navegacao__lista {
-        display: flex;
-        flex-direction: row;
-        gap: 1rem;
+    .apresentacao__conteiner {
+        height: auto;
+    }
+    .apresentacao__foto {
+        width: 146px;
+    }
+    .apresentacao__titulo {
+        font-size: 22px;  
+        line-height: 30px; 
+        margin-top: 40px;
+    } 
+    .sobre-mim__bloco {
+        padding: 32px;
+    }
+    .sobre-mim__texto {
+        margin-right: 0px;
+    }
+    .habilidades,
+    .hobbies,
+    .formacao,
+    .contato__formulario,
+    .contato__titulo,
+    .projetos__bloco {
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+    .sobre-mim__titulo,
+    .habilidades__titulo,
+    .hobbies__titulo,
+    .formacao__titulo,
+    .projetos__titulo {
+        font-size: 22px;
+        padding-top: 32px;
         margin-top: 0;
     }
-
-    .navegacao__elemento a {
-        font-size: 1rem;
+    .habilidades__lista,
+    .hobbies__lista {
+        padding-bottom: 32px;
+        padding-left: 0;
+        flex-wrap: wrap;
+    }
+    .formacao__elemento__marca {
+        width: auto;
+        height: 118px;
+        /* background-size: 190px; */
+    }
+    .formacao__icone{
+        width: 84px;
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+    .projetos__conteiner {
+        flex-direction: column;        
+        padding-bottom: 16px;
+    }
+    .projetos__conteiner__invertido {
+        flex-direction: column;
+        padding-bottom: 16px;
+    }
+    .projetos__conteiner__titulo h3 {
+        font-size: 16px;
+    }
+    .projetos__conteiner__titulo p {
+        font-size: 14px;
+    }
+    .projetos__conteiner__botao__repositorio {
+        padding:  12px 16px 12px 16px;
+        font-size: 14px;
+    }
+    .projetos__conteiner__botao__demo {
+        padding: 12px 16px 12px 16px;
+        font-size: 14px;
+        color: #ffffff;
+        border-color: #2A7AE4;
+    }
+    .contato {
+        padding: 32px;
+        margin-bottom: 60px;
+    }
+    .contato__titulo{
+        font-size: 22px;
+        padding: 0px;
+    }
+    .contato__formulario {
+        padding: 0px;
+        gap: 32px;
     }
 }
 
-/* Telas grandes */
-@media (min-width: 1024px) {
-    /* Aqui você pode ajustar ainda mais o design para telas grandes */
-    .cabecalho__titulo {
-        font-size: 1.8rem;
+/* Celular */
+@media (max-width: 480px) {
+    .cabecalho {
+        padding: 16px;  
     }
-
-    .navegacao__elemento a {
-        font-size: 1.1rem;
+    .cabecalho__logo {
+        max-width: 70px;
+    }
+    .cabecalho__titulo {
+        font-size: 16px;
+    }
+    .navegacao__lista {
+        font-size: 14px;
+    }
+    .apresentacao {
+        flex-direction: column;
+        align-items: flex-start;
+        padding:16px
+    }
+    .apresentacao__foto {
+        width: 98px;
+    }
+    .apresentacao__subtitulo {
+        font-size: 14px;
+    }
+    .redes {
+        font-size: 14px;
+        padding-bottom: 0px;
+    }
+    .redes__elemento img{
+        width: 10px;
+    }
+    .sobre-mim__titulo,
+    .habilidades__titulo,
+    .hobbies__titulo,
+    .formacao__titulo,
+    .projetos__titulo {
+        font-size: 22px;
+        padding-top: 16px;
+        padding-top: 0;
+    }
+    .sobre-mim__bloco {
+        padding: 16px;
+    }
+    .habilidades,
+    .hobbies,
+    .formacao,
+    .projetos {
+        padding: 16px;
+    }
+    .habilidades__lista,
+    .hobbies__lista {
+    display: flex;
+    padding-bottom: 0px;
+}
+    .habilidades__elemento,
+    .hobbies__elemento {
+        width: 176px;
+        height: 174px;
+    }
+    .formacao__lista {
+        flex-wrap: wrap;
+        padding-bottom: 22px;
+        margin-bottom: 0;
+    }
+    .formacao__detalhe {
+        margin-bottom: 0px;
+    }
+    .projetos__bloco {    
+        padding:0px;
+    }
+    .projetos__conteiner__img {
+        width: 100%;
+    }
+    .contato {
+        padding: 16px;
+    }
+    .contato__titulo{
+        font-size: 22px;    
+    }
+    .contato p {
+        font-size: 16px;
+        line-height: 20px;
+    } 
+    .contato__formulario {
+        display: flex;
+        flex-direction: column;
+        padding: 16px 0;
+        gap: 32px;
+    }   
+    .contato__formulario__caixa,
+    .contato__campo__assunto,
+    .contato__campo--textarea {
+        width: 100%;
+    }
+    .contato__formulario__caixa__nome label,
+    .contato__formulario__caixa__email label {   
+        font-size: 12px;
+    }
+    .contato__campo {
+        padding-bottom: 0px;
+    }
+    .contato__botao__enviar,
+    .contato__botao__limpar {
+        width: 120px;
+        height: 48px;
+        font-size: 14px;
     }
 }
