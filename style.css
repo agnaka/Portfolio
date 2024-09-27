@@ -390,7 +390,7 @@ footer {
 /* ------------------------------ Responsividade ---------------------------------------*/
 
 /* Tablets */
-@media (max-width: 80vw) {
+@media (max-width: 980px) {
     /* .navegacao__lista {
         display: none;
     }  */
