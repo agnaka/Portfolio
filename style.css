@@ -110,6 +110,10 @@ input:-webkit-autofill {
     padding-right: 10%;
     gap: 6rem;
 }
+figure {
+    margin-top: 0;
+    margin-bottom: 0;
+}
 .apresentacao__titulo {
     font-size: 52px;
     line-height: 60px;
@@ -296,7 +300,7 @@ input:-webkit-autofill {
 }
 .projetos__conteiner__botao__repositorio {
     padding: 16px;
-    font-size: 16px;
+    font-size: 14px;
     color: #2A7AE4;
     border: solid;
     border-width: 2px;
@@ -309,8 +313,10 @@ input:-webkit-autofill {
 .projetos__conteiner__botao__demo {
     background:#2A7AE4;
     padding: 16px;
-    font-size: 16px;
+    font-size: 14px;
     color: #ffffff;
+    border: solid;
+    border-width: 2px;
     border-color: #2A7AE4;    
     align-self: center;
 }
@@ -453,7 +459,7 @@ footer {
     } 
 
     .apresentacao__foto {
-        width: 146px;
+        width: 200px;
     }
     .apresentacao__titulo {
         font-size: 22px;  
@@ -525,11 +531,9 @@ footer {
         font-size: 14px;
     }
     .projetos__conteiner__botao__repositorio {
-        padding:  12px 16px 12px 16px;
         font-size: 14px;
     }
     .projetos__conteiner__botao__demo {
-        padding: 12px 16px 12px 16px;
         font-size: 14px;
         color: #ffffff;
         border-color: #2A7AE4;
@@ -569,7 +573,7 @@ footer {
         gap: 0;
     }
     .apresentacao__foto {
-        width: 98px;
+        width: 120px;
     }
     .apresentacao__titulo {
         margin-top: 16px;
@@ -627,7 +631,7 @@ footer {
         font-size: 14px;
     }
     .projetos__bloco {    
-        padding:0px;
+        padding:0px 16px;
     }
     .projetos__conteiner {
         gap: 0px;
@@ -640,6 +644,10 @@ footer {
     }
     .projetos__conteiner__invertido {
         gap: 0px;
+    }
+    .projetos__conteiner__botao__repositorio,
+    .projetos__conteiner__botao__demo {
+        font-size: 12px;
     }
     .contato {
         padding: 16px;
@@ -656,11 +664,12 @@ footer {
         flex-direction: column;
         padding: 16px 0;
         gap: 32px;
-    }   
+    } 
+    .contato__formulario__caixa,  
     .contato__formulario__caixa,
     .contato__campo__assunto,
     .contato__campo--textarea {
-        width: 100%;
+        width: 99%;
     }
     .contato__formulario__caixa__nome label,
     .contato__formulario__caixa__email label {   
