@@ -5,6 +5,8 @@
     --cor-do-link: #000000;
     --cor-da-section: #EAF2FD;
     --cor-a-hover: #2A7AE4;
+    --cor-botao-fundo: #e6e2e2;
+    
 
 }
 
@@ -301,17 +303,18 @@ figure {
 .projetos__conteiner__botao__repositorio {
     padding: 16px;
     font-size: 14px;
-    color: #2A7AE4;
+    font-weight: 600;
     border: solid;
     border-width: 2px;
-    border-color: #2A7AE4;
+    border-color: var(--cor-botao-fundo);
+    background-color: var(--cor-botao-fundo);
     align-self: center;
 }
 .projetos__conteiner__botao__repositorio:hover {
     transform: scale(1.1);
 }
 .projetos__conteiner__botao__demo {
-    background:#2A7AE4;
+    background-color:#2A7AE4;
     padding: 16px;
     font-size: 14px;
     color: #ffffff;
@@ -383,12 +386,13 @@ figure {
     resize: none;
 }
 .contato__botao__enviar {
-    background:#2A7AE4;
+    background:var(--cor-a-hover);
     color: #ffffff;
     width: 165px;
     height: 51px;
     border-radius: 10px;
-    font-size: 16px;
+    font-size: 16px;    
+    font-weight: 600;
     border-color: #2A7AE4;    
     text-align: center;
     margin-right: 20px;
@@ -404,8 +408,8 @@ figure {
     height: 51px;    
     border-radius: 10px;
     border: none;
-    font-size: 16px;
-    border-color: #2A7AE4;    
+    font-size: 16px;    
+    font-weight: 600;    
     text-align: center; 
     cursor: pointer;
 }
@@ -532,6 +536,7 @@ footer {
     }
     .projetos__conteiner__botao__repositorio {
         font-size: 14px;
+        background-color: #fff;
     }
     .projetos__conteiner__botao__demo {
         font-size: 14px;
