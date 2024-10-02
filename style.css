@@ -307,7 +307,7 @@ figure {
     border: solid;
     border-width: 2px;
     border-color: var(--cor-botao-fundo);
-    background-color: var(--cor-botao-fundo);
+    background-color: #ffffff;
     align-self: center;
 }
 .projetos__conteiner__botao__repositorio:hover {
